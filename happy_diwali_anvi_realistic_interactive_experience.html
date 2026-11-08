@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Diwali, Anvi ✨ | Our Festival of Lights</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cinzel: ['"Cinzel Decorative"', 'serif'],
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            100: '#FFF9E6',
+                            200: '#FFECB3',
+                            300: '#FFE082',
+                            400: '#FFD54F',
+                            500: '#FFC107',
+                            600: '#FFB300',
+                            700: '#FFA000',
+                            800: '#FF8F00',
+                            900: '#FF6F00',
+                        },
+                        night: {
+                            950: '#04040a',
+                            900: '#080714',
+                            800: '#100e26',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            background-color: #04040a;
+            color: #fff8eb;
+            overflow-x: hidden;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        /* Metallic Gold Text Effect */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fff6d6 0%, #ffd700 28%, #ff9900 52%, #fff1b8 75%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shineText 6s linear infinite;
+            filter: drop-shadow(0 4px 18px rgba(255, 180, 0, 0.35));
+        }
+        .rose-gold-text {
+            background: linear-gradient(135deg, #ffe5ec 0%, #ffb3c6 35%, #fb6f92 65%, #ffdab9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 2px 12px rgba(251, 111, 146, 0.4));
+        }
+        @keyframes shineText {
+            to { background-position: 200% center; }
+        }
+        /* Glassmorphism Cards with Festive Gold Trim */
+        .festive-glass {
+            background: radial-gradient(circle at top left, rgba(45, 25, 40, 0.65), rgba(10, 8, 22, 0.78));
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), inset 0 0 25px rgba(255, 190, 60, 0.08);
+        }
+        .festive-glass-btn {
+            background: linear-gradient(145deg, rgba(40, 22, 38, 0.88), rgba(15, 10, 28, 0.92));
+            border: 1px solid rgba(255, 200, 80, 0.35);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+            transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .festive-glass-btn:hover, .festive-glass-btn.active-cracker {
+            border-color: rgba(255, 215, 0, 0.95);
+            box-shadow: 0 0 28px rgba(255, 170, 0, 0.55), inset 0 0 15px rgba(255, 215, 0, 0.25);
+            transform: translateY(-3px) scale(1.02);
+        }
+        .festive-glass-btn:active {
+            transform: translateY(1px) scale(0.98);
+        }
+        /* Realistic Diya Flame CSS + SVG Animation */
+        .diya-flame-outer {
+            transform-origin: 50% 90%;
+            animation: flameFlicker 2.2s infinite ease-in-out alternate;
+            filter: drop-shadow(0 0 14px #ff9900) drop-shadow(0 0 28px #ff4500);
+        }
+        @keyframes flameFlicker {
+            0%   { transform: scaleX(1) scaleY(1) rotate(-1.5deg); }
+            25%  { transform: scaleX(0.94) scaleY(1.07) rotate(2deg); }
+            50%  { transform: scaleX(1.04) scaleY(0.96) rotate(-2deg); }
+            75%  { transform: scaleX(0.97) scaleY(1.05) rotate(1deg); }
+            100% { transform: scaleX(1.02) scaleY(1.03) rotate(-1deg); }
+        }
+        /* Rotating Rangoli Mandala */
+        .mandala-spin {
+            animation: slowSpin 90s linear infinite;
+        }
+        @keyframes slowSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        /* Screen Shake for 1000-Wala Ladi & Big Bombs */
+        .screen-shake {
+            animation: shakeAnim 0.35s cubic-bezier(.36,.07,.19,.97) both;
+        }
+        @keyframes shakeAnim {
+            10%, 90% { transform: translate3d(-2px, 1px, 0); }
+            20%, 80% { transform: translate3d(3px, -2px, 0); }
+            30%, 50%, 70% { transform: translate3d(-4px, 3px, 0); }
+            40%, 60% { transform: translate3d(4px, -3px, 0); }
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #05040d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #b8860b, #ff6a00);
+            border-radius: 3px;
+        }
+        /* Stone Courtyard Perspective Floor in Section 2 */
+        .courtyard-floor {
+            background: 
+                radial-gradient(ellipse at 50% 35%, rgba(255, 165, 50, 0.16) 0%, rgba(18, 12, 24, 0.92) 70%, #05040a 100%),
+                repeating-linear-gradient(90deg, rgba(255,215,0,0.04) 0px, rgba(255,215,0,0.04) 1px, transparent 1px, transparent 60px),
+                repeating-linear-gradient(0deg, rgba(255,215,0,0.05) 0px, rgba(255,215,0,0.05) 1px, transparent 1px, transparent 40px);
+            box-shadow: inset 0 25px 60px rgba(0,0,0,0.95);
+        }
+        /* Hanging Toran / Marigold Garland sway */
+        .garland-sway {
+            transform-origin: top center;
+            animation: sway 5s ease-in-out infinite alternate;
+        }
+        @keyframes sway {
+            0% { transform: rotate(-1.2deg); }
+            100% { transform: rotate(1.2deg); }
+        }
+    </style>
+</head>
+<body class="relative min-h-screen selection:bg-amber-500 selection:text-black">
+
+    <!-- ==================== GLOBAL FIXED REALISTIC PYROTECHNICS & SKY CANVAS ==================== -->
+    <canvas id="pyroCanvas" class="fixed inset-0 w-full h-full pointer-events-none z-10"></canvas>
+
+    <!-- ==================== TOP FESTIVE HANGING MARIGOLD & FAIRY LIGHTS ==================== -->
+    <div class="fixed top-0 left-0 right-0 z-30 pointer-events-none overflow-hidden h-16 opacity-90">
+        <svg class="w-full h-full preserve-3d" viewBox="0 0 1440 90" preserveAspectRatio="none">
+            <defs>
+                <radialGradient id="marigoldOrange" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#fff3b0"/>
+                    <stop offset="45%" stop-color="#ff9e00"/>
+                    <stop offset="100%" stop-color="#e85d04"/>
+                </radialGradient>
+                <radialGradient id="marigoldRed" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ffccd5"/>
+                    <stop offset="50%" stop-color="#ff4d6d"/>
+                    <stop offset="100%" stop-color="#800f2f"/>
+                </radialGradient>
+                <filter id="glowLight" x="-40%" y="-40%" width="180%" height="180%">
+                    <feGaussianBlur stdDeviation="4" result="blur"/>
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+            </defs>
+            <!-- Draped Garlands -->
+            <path d="M0,0 Q120,75 240,0 Q360,75 480,0 Q600,75 720,0 Q840,75 960,0 Q1080,75 1200,0 Q1320,75 1440,0" fill="none" stroke="url(#marigoldOrange)" stroke-width="12" stroke-dasharray="10 6" />
+            <path d="M-60,0 Q60,60 180,0 Q300,60 420,0 Q540,60 660,0 Q780,60 900,0 Q1020,60 1140,0 Q1260,60 1380,0 Q1500,60 1560,0" fill="none" stroke="url(#marigoldRed)" stroke-width="8" stroke-dasharray="8 8" opacity="0.85"/>
+            <!-- Hanging Golden Bells & Fairy Bulbs -->
+            <g filter="url(#glowLight)" fill="#ffd700">
+                <circle cx="120" cy="42" r="5"/><circle cx="360" cy="42" r="5"/><circle cx="600" cy="42" r="5"/>
+                <circle cx="840" cy="42" r="5"/><circle cx="1080" cy="42" r="5"/><circle cx="1320" cy="42" r="5"/>
+                <circle cx="240" cy="18" r="4"/><circle cx="480" cy="18" r="4"/><circle cx="720" cy="18" r="4"/>
+                <circle cx="960" cy="18" r="4"/><circle cx="1200" cy="18" r="4"/>
+            </g>
+        </svg>
+    </div>
+
+    <!-- ==================== FLOATING TOP NAVIGATION BAR & AUDIO CONTROLLER ==================== -->
+    <header class="fixed top-3 left-0 right-0 z-40 px-3 sm:px-6 flex justify-between items-center pointer-events-none">
+        <!-- Brand / Dedicated Badge -->
+        <a href="#hero" class="pointer-events-auto festive-glass px-4 py-2 rounded-full flex items-center gap-2.5 border border-amber-400/40 shadow-lg hover:border-amber-300 transition">
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+            </span>
+            <span class="font-cinzel text-xs sm:text-sm tracking-wider font-bold text-amber-200">For My Anvi ❤️</span>
+        </a>
+
+        <!-- Quick Section Navigation Pills -->
+        <nav class="pointer-events-auto hidden md:flex items-center gap-1 festive-glass px-2 py-1.5 rounded-full">
+            <a href="#hero" class="nav-pill px-3.5 py-1.5 rounded-full text-xs font-medium text-amber-100 hover:bg-amber-500/20 transition">✨ Night Sky</a>
+            <a href="#cracker-studio" class="nav-pill px-3.5 py-1.5 rounded-full text-xs font-medium text-amber-100 hover:bg-amber-500/20 transition">🧨 Cracker Studio</a>
+            <a href="#diya-altar" class="nav-pill px-3.5 py-1.5 rounded-full text-xs font-medium text-amber-100 hover:bg-amber-500/20 transition">🪔 Sacred Diyas</a>
+            <a href="#sky-lanterns" class="nav-pill px-3.5 py-1.5 rounded-full text-xs font-medium text-amber-100 hover:bg-amber-500/20 transition">🏮 Wish Lanterns</a>
+            <a href="#love-letter" class="nav-pill px-3.5 py-1.5 rounded-full text-xs font-medium text-amber-100 hover:bg-amber-500/20 transition">💌 For Anvi</a>
+        </nav>
+
+        <!-- Controls: Sparkler Cursor Toggle & Realistic Audio Toggle -->
+        <div class="pointer-events-auto flex items-center gap-2">
+            <button id="globalSparklerBtn" onclick="toggleSparklerCursor()" title="Toggle Phuljhari Sparkler Hand" class="festive-glass-btn px-3 py-2 rounded-full text-xs sm:text-sm font-medium text-amber-200 flex items-center gap-1.5 active-cracker">
+                <i class="fa-solid fa-wand-magic-sparkles text-amber-400"></i>
+                <span class="hidden sm:inline" id="sparklerStatusText">Phuljhari: ON</span>
+            </button>
+
+            <button id="audioToggleBtn" onclick="toggleAudioEngine()" class="festive-glass-btn px-3.5 py-2 rounded-full text-xs sm:text-sm font-semibold text-amber-200 flex items-center gap-2">
+                <i id="audioIcon" class="fa-solid fa-volume-high text-amber-400 animate-pulse"></i>
+                <span id="audioStatusText">Sound: ON</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Bottom Floating Navigation Bar -->
+    <nav class="md:hidden fixed bottom-3 left-3 right-3 z-40 festive-glass rounded-2xl px-2 py-2 flex justify-around items-center border border-amber-500/30 shadow-2xl">
+        <a href="#hero" class="flex flex-col items-center text-[10px] text-amber-200/90 hover:text-amber-400 py-1 px-2">
+            <i class="fa-solid fa-sparkles text-sm mb-0.5 text-amber-400"></i>Sky
+        </a>
+        <a href="#cracker-studio" class="flex flex-col items-center text-[10px] text-amber-200/90 hover:text-amber-400 py-1 px-2">
+            <i class="fa-solid fa-fire-flame-curved text-sm mb-0.5 text-orange-400"></i>Crackers
+        </a>
+        <a href="#diya-altar" class="flex flex-col items-center text-[10px] text-amber-200/90 hover:text-amber-400 py-1 px-2">
+            <i class="fa-solid fa-fire text-sm mb-0.5 text-yellow-400"></i>Diyas
+        </a>
+        <a href="#sky-lanterns" class="flex flex-col items-center text-[10px] text-amber-200/90 hover:text-amber-400 py-1 px-2">
+            <i class="fa-solid fa-paper-plane text-sm mb-0.5 text-amber-300"></i>Lanterns
+        </a>
+        <a href="#love-letter" class="flex flex-col items-center text-[10px] text-amber-200/90 hover:text-amber-400 py-1 px-2">
+            <i class="fa-solid fa-heart text-sm mb-0.5 text-rose-400"></i>Letter
+        </a>
+    </nav>
+
+    <!-- ==================== WELCOME ENTRANCE OVERLAY (UNLOCKS WEB AUDIO & LAUNCHES GRAND SALUTE) ==================== -->
+    <div id="welcomeOverlay" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl transition-opacity duration-700">
+        <div class="relative max-w-md w-full festive-glass rounded-3xl p-8 text-center border border-amber-400/50 shadow-[0_0_80px_rgba(255,165,0,0.35)] overflow-hidden">
+            <!-- Rotating Mandala Background -->
+            <svg class="w-72 h-72 mx-auto absolute -top-24 left-1/2 -translate-x-1/2 opacity-15 mandala-spin pointer-events-none" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="85" fill="none" stroke="#ffd700" stroke-width="2" stroke-dasharray="6 4"/>
+                <circle cx="100" cy="100" r="65" fill="none" stroke="#ff8800" stroke-width="1.5"/>
+                <g stroke="#ffd700" stroke-width="1.5" fill="none">
+                    <ellipse cx="100" cy="100" rx="80" ry="25" transform="rotate(0 100 100)"/>
+                    <ellipse cx="100" cy="100" rx="80" ry="25" transform="rotate(30 100 100)"/>
+                    <ellipse cx="100" cy="100" rx="80" ry="25" transform="rotate(60 100 100)"/>
+                    <ellipse cx="100" cy="100" rx="80" ry="25" transform="rotate(90 100 100)"/>
+                    <ellipse cx="100" cy="100" rx="80" ry="25" transform="rotate(120 100 100)"/>
+                    <ellipse cx="100" cy="100" rx="80" ry="25" transform="rotate(150 100 100)"/>
+                </g>
+            </svg>
+
+            <!-- Glowing Animated Diya Icon -->
+            <div class="relative w-24 h-24 mx-auto mb-5 flex items-center justify-center">
+                <div class="absolute inset-0 rounded-full bg-amber-500/30 blur-xl animate-pulse"></div>
+                <svg viewBox="0 0 120 120" class="w-24 h-24 overflow-visible">
+                    <!-- Flame -->
+                    <g class="diya-flame-outer">
+                        <path d="M60 15 C45 40, 44 58, 60 64 C76 58, 75 40, 60 15 Z" fill="url(#welcomeFlameGrad)"/>
+                        <path d="M60 28 C52 44, 52 56, 60 62 C68 56, 68 44, 60 28 Z" fill="#fffbe0"/>
+                    </g>
+                    <!-- Brass Diya Base -->
+                    <path d="M22 65 Q60 76 98 65 L86 92 Q60 104 34 92 Z" fill="url(#welcomeBrassGrad)" stroke="#ffea9f" stroke-width="1.5"/>
+                    <ellipse cx="60" cy="65" rx="38" ry="8" fill="#5e2a04" stroke="#ffd700" stroke-width="1.5"/>
+                    <defs>
+                        <linearGradient id="welcomeFlameGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="35%" stop-color="#ffe600"/>
+                            <stop offset="80%" stop-color="#ff5500"/>
+                            <stop offset="100%" stop-color="#990000"/>
+                        </linearGradient>
+                        <linearGradient id="welcomeBrassGrad" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#9c640c"/>
+                            <stop offset="50%" stop-color="#ffd700"/>
+                            <stop offset="100%" stop-color="#7e5109"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <p class="text-xs uppercase tracking-[0.35em] text-amber-300/90 mb-2 font-semibold">A Special Diwali Surprise</p>
+            <h1 class="font-cinzel text-3xl sm:text-4xl font-bold gold-gradient-text mb-3">For My Dearest Anvi</h1>
+            <p class="font-serif italic text-lg sm:text-xl text-amber-100/90 mb-6 leading-relaxed">
+                "I built this little night sky of real lights, crackers, diyas, and wishes just to see your beautiful smile tonight."
+            </p>
+
+            <button onclick="enterDiwaliExperience()" class="w-full py-4 px-6 rounded-2xl font-cinzel font-bold text-base sm:text-lg text-night-950 bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 hover:from-amber-200 hover:to-amber-500 shadow-[0_0_35px_rgba(255,193,7,0.65)] transition transform hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3">
+                <i class="fa-solid fa-fire-flame-curved"></i>
+                <span>Light The First Spark, Anvi ✨</span>
+            </button>
+            <p class="text-[11px] text-amber-200/60 mt-3 flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-headphones"></i> Turn up your volume for realistic cracker sounds
+            </p>
+        </div>
+    </div>
+
+    <!-- ==================== SECTION 1: GRAND NIGHT SKY & ROMANTIC HERO ==================== -->
+    <section id="hero" class="relative min-h-screen w-full flex flex-col justify-between items-center pt-24 pb-20 px-4 overflow-hidden">
+        
+        <!-- Top Sky Hints & Interactive Status -->
+        <div class="z-20 text-center max-w-3xl mx-auto mt-4 sm:mt-8 pointer-events-none">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-200 text-xs sm:text-sm mb-5 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                <span>Tap or click anywhere in the sky to launch realistic shells</span>
+            </div>
+
+            <h1 class="font-cinzel text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-tight gold-gradient-text mb-3">
+                Happy Diwali, Anvi ✨
+            </h1>
+            <p class="font-serif italic text-xl sm:text-2xl md:text-3xl rose-gold-text font-semibold mb-4">
+                You are the brightest Roshni in my entire universe
+            </p>
+            <p class="text-sm sm:text-base text-amber-100/80 max-w-xl mx-auto leading-relaxed font-light">
+                Every spark that blooms in this sky carries a prayer for your happiness, your laughter, and all the magical Diwali nights we'll celebrate together.
+            </p>
+        </div>
+
+        <!-- Quick Sky Firework Presets (Clickable in Hero) -->
+        <div class="z-20 my-auto py-6 flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 max-w-3xl mx-auto">
+            <button onclick="launchAnviSkyShow()" class="festive-glass-btn px-5 py-3 rounded-2xl text-xs sm:text-sm font-semibold text-amber-100 flex items-center gap-2.5 border-rose-400/60 shadow-[0_0_25px_rgba(251,113,133,0.35)]">
+                <i class="fa-solid fa-heart text-rose-400 animate-bounce"></i>
+                <span>Write "ANVI ❤️" in the Sky</span>
+            </button>
+
+            <button onclick="launchHeartBarrage()" class="festive-glass-btn px-4 py-3 rounded-2xl text-xs sm:text-sm font-medium text-amber-100 flex items-center gap-2">
+                <i class="fa-solid fa-burst text-pink-400"></i>
+                <span>Ruby Heart Shells</span>
+            </button>
+
+            <button onclick="launchGoldenKamuro()" class="festive-glass-btn px-4 py-3 rounded-2xl text-xs sm:text-sm font-medium text-amber-100 flex items-center gap-2">
+                <i class="fa-solid fa-crown text-amber-400"></i>
+                <span>Royal Golden Willow</span>
+            </button>
+
+            <button onclick="launchGrandFinaleSalute()" class="festive-glass-btn px-4 py-3 rounded-2xl text-xs sm:text-sm font-medium text-amber-100 flex items-center gap-2">
+                <i class="fa-solid fa-meteor text-cyan-300"></i>
+                <span>Grand Sky Finale</span>
+            </button>
+        </div>
+
+        <!-- Scroll Down Prompt -->
+        <div class="z-20 text-center mb-4">
+            <a href="#cracker-studio" class="inline-flex flex-col items-center text-xs text-amber-200/80 hover:text-amber-300 transition group">
+                <span class="uppercase tracking-[0.25em] mb-1.5 font-medium">Step Into Our Courtyard & Light Crackers</span>
+                <div class="w-8 h-8 rounded-full border border-amber-400/40 flex items-center justify-center group-hover:translate-y-1 transition">
+                    <i class="fa-solid fa-chevron-down text-amber-400"></i>
+                </div>
+            </a>
+        </div>
+
+        <!-- Palace Silhouette at Bottom of Hero (Dynamically Lit by Canvas Flashes) -->
+        <div class="absolute bottom-0 left-0 right-0 pointer-events-none z-0 opacity-90">
+            <svg viewBox="0 0 1440 220" class="w-full h-28 sm:h-44 object-cover" preserveAspectRatio="none">
+                <path fill="#05040b" d="M0,220 L0,160 L60,160 L60,130 L90,100 L120,130 L120,160 L200,160 L200,110 C200,80 240,60 260,35 C280,60 320,80 320,110 L320,160 L420,160 L420,130 L450,95 L480,130 L480,160 L580,160 L580,90 C580,50 660,25 720,5 C780,25 860,50 860,90 L860,160 L960,160 L960,130 L990,95 L1020,130 L1020,160 L1120,160 L1120,110 C1120,80 1160,60 1180,35 C1200,60 1240,80 1240,110 L1240,160 L1320,160 L1320,130 L1350,100 L1380,130 L1380,160 L1440,160 L1440,220 Z"/>
+                <!-- Warm glowing palace windows -->
+                <g fill="#ffb703" opacity="0.65">
+                    <rect x="252" y="115" width="16" height="26" rx="8"/>
+                    <rect x="702" y="85" width="14" height="30" rx="7"/>
+                    <rect x="724" y="85" width="14" height="30" rx="7"/>
+                    <rect x="1172" y="115" width="16" height="26" rx="8"/>
+                </g>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 2: INTERACTIVE CRACKER STUDIO ("LIGHT CRACKERS TOGETHER") ==================== -->
+    <section id="cracker-studio" class="relative min-h-screen w-full py-20 px-4 flex flex-col justify-between z-20">
+        <div class="max-w-6xl mx-auto w-full">
+            <!-- Section Header -->
+            <div class="text-center mb-8">
+                <span class="text-xs uppercase tracking-[0.3em] text-amber-400 font-semibold block mb-1">Interactive Pyrotechnic Courtyard</span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl font-bold gold-gradient-text mb-2">Light Crackers Together, Anvi 🧨</h2>
+                <p class="text-sm sm:text-base text-amber-100/75 max-w-2xl mx-auto">
+                    Pick your favorite cracker below or tap directly on the stone courtyard floor to place and ignite realistic Anars, Chakris, 1000-Wala Ladis, and Sky Rockets!
+                </p>
+            </div>
+
+            <!-- Interactive Cracker Dock / Selector -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
+                <!-- 1. Anar (Fountain) -->
+                <button onclick="selectAndTriggerCracker('anar', this)" class="cracker-card festive-glass-btn rounded-2xl p-3.5 text-left flex flex-col justify-between group relative overflow-hidden active-cracker">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-xl">🌋</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-400/20 text-amber-300 font-semibold">Fountain</span>
+                    </div>
+                    <div>
+                        <h3 class="font-cinzel font-bold text-sm sm:text-base text-amber-200 group-hover:text-white">Golden Anar</h3>
+                        <p class="text-[11px] text-amber-100/65 leading-tight mt-0.5">Tall volcano of gold, silver & ruby sparks</p>
+                    </div>
+                </button>
+
+                <!-- 2. Chakri (Zameen Chakkar) -->
+                <button onclick="selectAndTriggerCracker('chakri', this)" class="cracker-card festive-glass-btn rounded-2xl p-3.5 text-left flex flex-col justify-between group relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-xl">🌀</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-400/20 text-emerald-300 font-semibold">Spinner</span>
+                    </div>
+                    <div>
+                        <h3 class="font-cinzel font-bold text-sm sm:text-base text-amber-200 group-hover:text-white">Zameen Chakri</h3>
+                        <p class="text-[11px] text-amber-100/65 leading-tight mt-0.5">High-speed neon spiral ground spinner</p>
+                    </div>
+                </button>
+
+                <!-- 3. 1000-Wala Ladi (Garland Bomb) -->
+                <button onclick="selectAndTriggerCracker('ladi', this)" class="cracker-card festive-glass-btn rounded-2xl p-3.5 text-left flex flex-col justify-between group relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="w-10 h-10 rounded-xl bg-red-500/20 border border-red-400/40 flex items-center justify-center text-xl">🧨</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-red-400/20 text-red-300 font-semibold">Rapid Chain</span>
+                    </div>
+                    <div>
+                        <h3 class="font-cinzel font-bold text-sm sm:text-base text-amber-200 group-hover:text-white">1000-Wala Ladi</h3>
+                        <p class="text-[11px] text-amber-100/65 leading-tight mt-0.5">Intense rapid-fire red garland crackers</p>
+                    </div>
+                </button>
+
+                <!-- 4. Whistling Sky Rocket -->
+                <button onclick="selectAndTriggerCracker('rocket', this)" class="cracker-card festive-glass-btn rounded-2xl p-3.5 text-left flex flex-col justify-between group relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-400/40 flex items-center justify-center text-xl">🚀</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-purple-400/20 text-purple-300 font-semibold">Bottle Rocket</span>
+                    </div>
+                    <div>
+                        <h3 class="font-cinzel font-bold text-sm sm:text-base text-amber-200 group-hover:text-white">Whistle Rocket</h3>
+                        <p class="text-[11px] text-amber-100/65 leading-tight mt-0.5">Screaming trail into multi-ring burst</p>
+                    </div>
+                </button>
+
+                <!-- 5. Phuljhari Sparkler Mode -->
+                <button onclick="activatePhuljhariCard(this)" class="cracker-card festive-glass-btn rounded-2xl p-3.5 text-left flex flex-col justify-between group relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="w-10 h-10 rounded-xl bg-yellow-500/20 border border-yellow-400/40 flex items-center justify-center text-xl">✨</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-yellow-400/20 text-yellow-300 font-semibold">Interactive</span>
+                    </div>
+                    <div>
+                        <h3 class="font-cinzel font-bold text-sm sm:text-base text-amber-200 group-hover:text-white">Phuljhari Rod</h3>
+                        <p class="text-[11px] text-amber-100/65 leading-tight mt-0.5">Move finger/mouse to wave real sparkler</p>
+                    </div>
+                </button>
+
+                <!-- 6. Special "ANVI ❤️" Sky Firework -->
+                <button onclick="launchAnviSkyShow()" class="cracker-card festive-glass-btn rounded-2xl p-3.5 text-left flex flex-col justify-between group relative overflow-hidden border-rose-400/60">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="w-10 h-10 rounded-xl bg-rose-500/25 border border-rose-400/50 flex items-center justify-center text-xl">💖</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-rose-400/20 text-rose-300 font-semibold">Custom</span>
+                    </div>
+                    <div>
+                        <h3 class="font-cinzel font-bold text-sm sm:text-base text-rose-200 group-hover:text-white">"ANVI ❤️" Show</h3>
+                        <p class="text-[11px] text-rose-100/75 leading-tight mt-0.5">Spells your name in glowing gold embers</p>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Interactive Courtyard Stage Floor -->
+            <div id="courtyardStage" onclick="handleCourtyardClick(event)" class="relative w-full h-[360px] sm:h-[430px] rounded-3xl courtyard-floor border border-amber-500/30 overflow-hidden cursor-crosshair flex flex-col justify-between p-5 select-none">
+                <!-- Top Courtyard Status Bar -->
+                <div class="flex flex-wrap justify-between items-center gap-2 z-20 pointer-events-none">
+                    <div class="px-3.5 py-1.5 rounded-full bg-black/65 border border-amber-400/30 text-xs text-amber-200 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-orange-400 animate-ping"></span>
+                        <span>Selected Cracker: <strong id="currentCrackerLabel" class="text-amber-300 font-semibold">Golden Anar (Fountain)</strong></span>
+                    </div>
+                    <div class="px-3.5 py-1.5 rounded-full bg-black/65 border border-amber-400/20 text-xs text-amber-100/75">
+                        Tap anywhere on this courtyard floor to ignite!
+                    </div>
+                </div>
+
+                <!-- Decorative Brass Corner Lamps in Courtyard -->
+                <div class="my-auto text-center pointer-events-none opacity-45">
+                    <p class="font-cinzel text-lg sm:text-2xl text-amber-200/50 tracking-widest uppercase">✨ Royal Festive Courtyard ✨</p>
+                    <p class="text-xs text-amber-100/40 mt-1">Click or tap multiple times to light a whole row of Anars & Chakris together</p>
+                </div>
+
+                <!-- Quick Combo Trigger Bar inside Courtyard -->
+                <div class="flex flex-wrap items-center justify-center gap-3 z-20" onclick="event.stopPropagation()">
+                    <button onclick="igniteCourtyardCombo('anarRow')" class="px-4 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/50 text-xs font-semibold text-amber-200 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-fire text-amber-400"></i> Light 5 Anars in a Row
+                    </button>
+                    <button onclick="igniteCourtyardCombo('chakriDance')" class="px-4 py-2 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/35 border border-emerald-400/50 text-xs font-semibold text-emerald-200 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-hurricane text-emerald-400"></i> Triple Chakri Spin
+                    </button>
+                    <button onclick="igniteCourtyardCombo('megaLadi')" class="px-4 py-2 rounded-xl bg-red-500/20 hover:bg-red-500/35 border border-red-400/50 text-xs font-semibold text-red-200 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-explosion text-red-400"></i> Ignite Full Ladi Strip
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 3: SACRED DIYA LIGHTING ALTAR ("LIGHT THE DIYAS OF OUR WISHES") ==================== -->
+    <section id="diya-altar" class="relative min-h-screen w-full py-20 px-4 flex items-center justify-center z-20">
+        <div class="max-w-5xl mx-auto w-full">
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <span class="text-xs uppercase tracking-[0.3em] text-amber-400 font-semibold block mb-1">Sacred Blessing Thali</span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl font-bold gold-gradient-text mb-3">Light the Diyas of Our Wishes 🪔</h2>
+                <p class="text-sm sm:text-base text-amber-100/80 max-w-xl mx-auto">
+                    Anvi, tap each terracotta Diya around the Rangoli to light its flame. Every flame holds a personal blessing and promise for us.
+                </p>
+                <!-- Progress Counter -->
+                <div class="mt-4 inline-flex items-center gap-3 px-5 py-2 rounded-full festive-glass border border-amber-400/40">
+                    <span class="text-xs sm:text-sm font-medium text-amber-200">Diyas Lit: <strong id="diyaCountText" class="text-amber-400 font-bold">0 / 7</strong></span>
+                    <button onclick="lightAllDiyas()" class="text-xs px-3 py-1 rounded-full bg-amber-400/20 hover:bg-amber-400/40 text-amber-200 border border-amber-400/40 transition">
+                        Light All ✨
+                    </button>
+                </div>
+            </div>
+
+            <!-- Rangoli & 7 Interactive Diyas Grid -->
+            <div class="relative festive-glass rounded-3xl p-6 sm:p-10 border border-amber-400/30 overflow-hidden">
+                <!-- Intricate Glowing SVG Rangoli Centerpiece -->
+                <svg class="w-96 h-96 sm:w-[460px] sm:h-[460px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20 mandala-spin pointer-events-none" viewBox="0 0 300 300">
+                    <defs>
+                        <radialGradient id="rangoliGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#ffd700"/>
+                            <stop offset="50%" stop-color="#ff006e"/>
+                            <stop offset="100%" stop-color="#8338ec"/>
+                        </radialGradient>
+                    </defs>
+                    <circle cx="150" cy="150" r="135" fill="none" stroke="url(#rangoliGrad)" stroke-width="3" stroke-dasharray="8 6"/>
+                    <circle cx="150" cy="150" r="105" fill="none" stroke="#ffd700" stroke-width="2"/>
+                    <circle cx="150" cy="150" r="70" fill="none" stroke="#ff9900" stroke-width="2" stroke-dasharray="4 4"/>
+                    <g stroke="url(#rangoliGrad)" stroke-width="2" fill="rgba(255, 183, 3, 0.06)">
+                        <ellipse cx="150" cy="150" rx="125" ry="38" transform="rotate(0 150 150)"/>
+                        <ellipse cx="150" cy="150" rx="125" ry="38" transform="rotate(30 150 150)"/>
+                        <ellipse cx="150" cy="150" rx="125" ry="38" transform="rotate(60 150 150)"/>
+                        <ellipse cx="150" cy="150" rx="125" ry="38" transform="rotate(90 150 150)"/>
+                        <ellipse cx="150" cy="150" rx="125" ry="38" transform="rotate(120 150 150)"/>
+                        <ellipse cx="150" cy="150" rx="125" ry="38" transform="rotate(150 150 150)"/>
+                    </g>
+                </svg>
+
+                <!-- DynamicDiyas Container populated by JS -->
+                <div id="diyasGrid" class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Populated via JavaScript -->
+                </div>
+
+                <!-- Revealed Blessing Banner -->
+                <div id="diyaBlessingBanner" class="relative z-10 mt-8 p-5 rounded-2xl bg-gradient-to-r from-amber-950/70 via-rose-950/60 to-amber-950/70 border border-amber-400/40 text-center transition-all duration-500">
+                    <p class="text-xs uppercase tracking-widest text-amber-300/80 mb-1">✨ Sacred Diwali Blessing for Anvi ✨</p>
+                    <p id="diyaBlessingQuote" class="font-serif italic text-xl sm:text-2xl text-amber-100">
+                        "Tap any Diya above to ignite its golden flame and reveal a wish from my heart..."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 4: FLOATING SKY LANTERNS ("SEND A WISH TO THE STARS") ==================== -->
+    <section id="sky-lanterns" class="relative min-h-screen w-full py-20 px-4 flex items-center justify-center z-20">
+        <div class="max-w-4xl mx-auto w-full">
+            <div class="festive-glass rounded-3xl p-6 sm:p-10 border border-amber-400/35 relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Left Column: Visual Glowing Paper Lantern Preview -->
+                    <div class="lg:col-span-5 flex flex-col items-center justify-center text-center">
+                        <div class="relative w-44 h-56 flex items-center justify-center group cursor-pointer" onclick="releaseCustomLantern()">
+                            <div class="absolute inset-0 rounded-full bg-amber-500/25 blur-3xl group-hover:bg-amber-400/40 transition"></div>
+                            <!-- SVG Realistic Kongming Sky Lantern -->
+                            <svg viewBox="0 0 160 210" class="w-40 h-52 overflow-visible drop-shadow-[0_0_25px_rgba(255,160,30,0.65)] transition-transform duration-700 group-hover:-translate-y-3">
+                                <defs>
+                                    <radialGradient id="lanternGlow" cx="50%" cy="65%" r="55%">
+                                        <stop offset="0%" stop-color="#fff8d6"/>
+                                        <stop offset="40%" stop-color="#ffaa00"/>
+                                        <stop offset="80%" stop-color="#e85d04"/>
+                                        <stop offset="100%" stop-color="#9d0208"/>
+                                    </radialGradient>
+                                </defs>
+                                <!-- Lantern Body -->
+                                <path d="M35 35 Q80 10 125 35 L140 135 Q80 155 20 135 Z" fill="url(#lanternGlow)" stroke="#ffd166" stroke-width="1.5"/>
+                                <!-- Paper Ribs -->
+                                <path d="M55 25 L48 142 M105 25 L112 142" stroke="rgba(140, 40, 0, 0.35)" stroke-width="1.2"/>
+                                <!-- Bottom Rim & Inner Flame -->
+                                <ellipse cx="80" cy="142" rx="42" ry="10" fill="#4a1500" stroke="#ffb703" stroke-width="2"/>
+                                <circle cx="80" cy="140" r="10" fill="#ffffff" class="animate-pulse"/>
+                                <!-- Inscribed "Anvi" on Lantern -->
+                                <text x="80" y="92" text-anchor="middle" fill="#5c1a00" font-family="Cinzel Decorative, serif" font-weight="bold" font-size="17" opacity="0.85">ANVI ❤️</text>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-amber-200/75 mt-2">
+                            Lanterns Floating in Sky: <strong id="lanternCounter" class="text-amber-400">12</strong>
+                        </p>
+                    </div>
+
+                    <!-- Right Column: Wish Composer & Presets -->
+                    <div class="lg:col-span-7">
+                        <span class="text-xs uppercase tracking-[0.3em] text-amber-400 font-semibold block mb-1">Kongming Wish Lanterns</span>
+                        <h2 class="font-cinzel text-2xl sm:text-4xl font-bold gold-gradient-text mb-3">Send a Wish to the Stars 🏮</h2>
+                        <p class="text-sm sm:text-base text-amber-100/80 mb-5">
+                            Write any wish, dream, or prayer for us below, Anvi. When you release it, a warm glowing sky lantern inscribed with your words will rise into the starry night sky above!
+                        </p>
+
+                        <!-- Input Box -->
+                        <div class="mb-4">
+                            <label class="block text-xs uppercase tracking-wider text-amber-300/80 mb-2">Your Diwali Wish or Note</label>
+                            <input id="lanternWishInput" type="text" maxlength="60" value="Forever Happiness with Anvi ❤️" placeholder="Type your wish here, Anvi..." 
+                                class="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-amber-400/40 text-amber-100 placeholder-amber-200/40 focus:outline-none focus:border-amber-300 text-sm sm:text-base"/>
+                        </div>
+
+                        <!-- Quick Romantic Wish Presets -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <button onclick="setLanternPreset('Endless Smiles for Anvi ✨')" class="text-xs px-3 py-1.5 rounded-full bg-amber-500/15 hover:bg-amber-500/30 border border-amber-400/30 text-amber-200 transition">
+                                ✨ Endless Smiles for Anvi
+                            </button>
+                            <button onclick="setLanternPreset('Our Dream Trips Together 🌍❤️')" class="text-xs px-3 py-1.5 rounded-full bg-amber-500/15 hover:bg-amber-500/30 border border-amber-400/30 text-amber-200 transition">
+                                🌍 Our Dream Trips
+                            </button>
+                            <button onclick="setLanternPreset('Every Diwali Together 🪔💑')" class="text-xs px-3 py-1.5 rounded-full bg-amber-500/15 hover:bg-amber-500/30 border border-amber-400/30 text-amber-200 transition">
+                                🪔 Every Diwali Together
+                            </button>
+                            <button onclick="setLanternPreset('All Your Dreams Come True 🌟')" class="text-xs px-3 py-1.5 rounded-full bg-amber-500/15 hover:bg-amber-500/30 border border-amber-400/30 text-amber-200 transition">
+                                🌟 Your Dreams Come True
+                            </button>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="releaseCustomLantern()" class="flex-1 py-3.5 px-6 rounded-xl font-cinzel font-bold text-sm sm:text-base text-night-950 bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 hover:from-amber-200 hover:to-amber-500 shadow-[0_0_25px_rgba(255,180,0,0.5)] transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Light & Release Sky Lantern</span>
+                            </button>
+                            <button onclick="releaseLanternFlock()" class="py-3.5 px-5 rounded-xl festive-glass-btn text-xs sm:text-sm font-semibold text-amber-200 flex items-center gap-2">
+                                <i class="fa-solid fa-cloud-sun text-amber-400"></i>
+                                <span>Release 10 Lanterns</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 5: A PERSONAL LOVE LETTER FOR ANVI ==================== -->
+    <section id="love-letter" class="relative min-h-screen w-full py-24 px-4 flex items-center justify-center z-20">
+        <div class="max-w-3xl mx-auto w-full">
+            <div class="relative festive-glass rounded-3xl p-8 sm:p-14 border border-amber-400/45 shadow-[0_0_70px_rgba(255,150,40,0.22)] overflow-hidden">
+                
+                <!-- Warm Candlelight Corner Glows -->
+                <div class=" -top-20 -left-20 w-60 h-60 bg-amber-500/20 rounded-full blur-3xl pointer-events-none absolute"></div>
+                <div class=" -bottom-20 -right-20 w-60 h-60 bg-rose-500/20 rounded-full blur-3xl pointer-events-none absolute"></div>
+
+                <!-- Decorative Gold Header Ornament -->
+                <div class="text-center mb-8">
+                    <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-400/15 border border-amber-400/40 mb-3 text-2xl">
+                        💌
+                    </div>
+                    <p class="text-xs uppercase tracking-[0.35em] text-amber-300 font-semibold">Written by candlelight</p>
+                    <h2 class="font-cinzel text-3xl sm:text-4xl font-bold gold-gradient-text mt-1">My Dearest Anvi,</h2>
+                </div>
+
+                <!-- Letter Body -->
+                <div class="font-serif text-lg sm:text-2xl text-amber-50/95 space-y-5 leading-relaxed italic">
+                    <p>
+                        People call Diwali the Festival of Lights because millions of diyas and fireworks brighten up the darkest night of the year. But ever since you came into my life, Anvi, I haven't needed a festival to know what true light feels like.
+                    </p>
+                    <p>
+                        Your smile outshines the brightest golden Anar, your laugh is sweeter than any celebration, and the warmth you bring into my world feels calmer and purer than a thousand sacred diyas glowing together.
+                    </p>
+                    <p>
+                        Tonight, as we watch these sparks dance across the sky, my only wish is that life always keeps your eyes sparkling with joy, protects your gentle heart, and lets me stand right beside you through every season and every Diwali to come.
+                    </p>
+                </div>
+
+                <!-- Signature & Grand Celebration Button -->
+                <div class="mt-10 pt-6 border-t border-amber-400/25 flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div class="text-center sm:text-left">
+                        <p class="text-xs uppercase tracking-widest text-amber-300/75">Forever & Always Yours,</p>
+                        <p class="font-cinzel text-2xl font-bold rose-gold-text mt-1">With All My Love ❤️</p>
+                    </div>
+
+                    <button onclick="triggerRomanticFinale()" class="py-3.5 px-7 rounded-2xl font-cinzel font-bold text-sm sm:text-base text-white bg-gradient-to-r from-rose-500 via-amber-500 to-rose-500 hover:opacity-95 shadow-[0_0_30px_rgba(244,63,94,0.55)] transition transform hover:scale-105 flex items-center gap-2.5">
+                        <i class="fa-solid fa-heart-circle-bolt"></i>
+                        <span>I Love You, Anvi! (Grand Show)</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer Note -->
+            <p class="text-center text-xs text-amber-200/50 mt-8 pb-12">
+                Crafted with pure love, realistic physics & golden sparks exclusively for <span class="text-amber-300 font-semibold">Anvi</span> • Happy Diwali ✨
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== TOAST NOTIFICATION FOR ACTIONS ==================== -->
+    <div id="festiveToast" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-all duration-300 transform -translate-y-3">
+        <div class="festive-glass px-5 py-2.5 rounded-full border border-amber-300/60 shadow-2xl flex items-center gap-2.5 text-xs sm:text-sm font-medium text-amber-100">
+            <span id="toastEmoji">✨</span>
+            <span id="toastMessage">Happy Diwali, Anvi!</span>
+        </div>
+    </div>
+
+    <!-- ==================== REALISTIC PHYSICS, CRACKER & PROCEDURAL WEB AUDIO ENGINE ==================== -->
+    <script>
+        /*************************************************************************
+         * 1. PROCEDURAL WEB AUDIO SYNTHESIS ENGINE (NO EXTERNAL MP3 NEEDED)
+         * Generates realistic:
+         * - Deep low-frequency chest thuds for aerial shells
+         * - High-pitched whistling bottle rockets
+         * - Rapid high-voltage crackle for Phuljhari, Anar & Kamuro stars
+         * - Swirling whoosh for Chakri spinners
+         * - Rapid chain explosions for 1000-Wala Ladi
+         *************************************************************************/
+        class RealisticPyroAudio {
+            constructor() {
+                this.ctx = null;
+                this.enabled = true;
+                this.noiseBuffer = null;
+            }
+
+            init() {
+                if (this.ctx) {
+                    if (this.ctx.state === 'suspended') this.ctx.resume();
+                    return;
+                }
+                const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                if (!AudioCtx) return;
+                this.ctx = new AudioCtx();
+
+                // Create 2-second white/pink noise buffer for realistic explosions & crackles
+                const sampleRate = this.ctx.sampleRate;
+                const length = sampleRate * 2.0;
+                this.noiseBuffer = this.ctx.createBuffer(1, length, sampleRate);
+                const data = this.noiseBuffer.getChannelData(0);
+                for (let i = 0; i < length; i++) {
+                    data[i] = Math.random() * 2 - 1;
+                }
+            }
+
+            // Launch Whistle / Whoosh for Rockets
+            playRocketLaunch(withWhistle = false) {
+                if (!this.enabled || !this.ctx) return;
+                const now = this.ctx.currentTime;
+
+                // Whoosh noise
+                const noise = this.ctx.createBufferSource();
+                noise.buffer = this.noiseBuffer;
+                const filter = this.ctx.createBiquadFilter();
+                filter.type = 'bandpass';
+                filter.frequency.setValueAtTime(500, now);
+                filter.frequency.exponentialRampToValueAtTime(1600, now + 0.55);
+                filter.Q.value = 2.5;
+
+                const gain = this.ctx.createGain();
+                gain.gain.setValueAtTime(0.01, now);
+                gain.gain.linearRampToValueAtTime(0.14, now + 0.08);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
+
+                noise.connect(filter);
+                filter.connect(gain);
+                gain.connect(this.ctx.destination);
+                noise.start(now);
+                noise.stop(now + 0.6);
+
+                if (withWhistle) {
+                    const osc = this.ctx.createOscillator();
+                    const wGain = this.ctx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(1400, now);
+                    osc.frequency.exponentialRampToValueAtTime(3400, now + 0.45);
+                    osc.frequency.exponentialRampToValueAtTime(2200, now + 0.7);
+
+                    wGain.gain.setValueAtTime(0.005, now);
+                    wGain.gain.linearRampToValueAtTime(0.08, now + 0.1);
+                    wGain.gain.exponentialRampToValueAtTime(0.001, now + 0.72);
+
+                    osc.connect(wGain);
+                    wGain.connect(this.ctx.destination);
+                    osc.start(now);
+                    osc.stop(now + 0.75);
+                }
+            }
+
+            // Deep Realistic Aerial Shell Explosion (Sub-bass thump + filtered noise boom + crackle tail)
+            playShellBoom(intensity = 1.0, hasCrackle = false) {
+                if (!this.enabled || !this.ctx) return;
+                const now = this.ctx.currentTime;
+
+                // 1. Sub-bass chest punch oscillator
+                const subOsc = this.ctx.createOscillator();
+                const subGain = this.ctx.createGain();
+                subOsc.type = 'sine';
+                subOsc.frequency.setValueAtTime(135, now);
+                subOsc.frequency.exponentialRampToValueAtTime(26, now + 0.45);
+
+                subGain.gain.setValueAtTime(0.45 * intensity, now);
+                subGain.gain.exponentialRampToValueAtTime(0.001, now + 0.5);
+
+                subOsc.connect(subGain);
+                subGain.connect(this.ctx.destination);
+                subOsc.start(now);
+                subOsc.stop(now + 0.52);
+
+                // 2. Explosion Body Noise
+                const noise = this.ctx.createBufferSource();
+                noise.buffer = this.noiseBuffer;
+
+                const lowpass = this.ctx.createBiquadFilter();
+                lowpass.type = 'lowpass';
+                lowpass.frequency.setValueAtTime(1100, now);
+                lowpass.frequency.exponentialRampToValueAtTime(140, now + 1.1);
+
+                const nGain = this.ctx.createGain();
+                nGain.gain.setValueAtTime(0.4 * intensity, now);
+                nGain.gain.exponentialRampToValueAtTime(0.001, now + 1.15);
+
+                noise.connect(lowpass);
+                lowpass.connect(nGain);
+                nGain.connect(this.ctx.destination);
+                noise.start(now);
+                noise.stop(now + 1.2);
+
+                // 3. Secondary crackling stars if Kamuro/Crackle shell
+                if (hasCrackle) {
+                    for (let i = 0; i < 8; i++) {
+                        setTimeout(() => this.playSparkCrackle(0.18), 260 + Math.random() * 550);
+                    }
+                }
+            }
+
+            // Crisp High-Frequency Crackle (Phuljhari, Anar, Crackle stars)
+            playSparkCrackle(volume = 0.12) {
+                if (!this.enabled || !this.ctx) return;
+                const now = this.ctx.currentTime;
+
+                const noise = this.ctx.createBufferSource();
+                noise.buffer = this.noiseBuffer;
+
+                const hp = this.ctx.createBiquadFilter();
+                hp.type = 'bandpass';
+                hp.frequency.setValueAtTime(2800 + Math.random() * 2500, now);
+                hp.Q.value = 3.0;
+
+                const gain = this.ctx.createGain();
+                gain.gain.setValueAtTime(volume, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.045);
+
+                noise.connect(hp);
+                hp.connect(gain);
+                gain.connect(this.ctx.destination);
+                noise.start(now, Math.random() * 1.2, 0.05);
+            }
+
+            // Sharp Firecracker Pop for 1000-Wala Ladi
+            playLadiSnap() {
+                if (!this.enabled || !this.ctx) return;
+                const now = this.ctx.currentTime;
+
+                const noise = this.ctx.createBufferSource();
+                noise.buffer = this.noiseBuffer;
+
+                const bp = this.ctx.createBiquadFilter();
+                bp.type = 'bandpass';
+                bp.frequency.setValueAtTime(950 + Math.random() * 600, now);
+                bp.Q.value = 1.2;
+
+                const gain = this.ctx.createGain();
+                gain.gain.setValueAtTime(0.38, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.14);
+
+                noise.connect(bp);
+                bp.connect(gain);
+                gain.connect(this.ctx.destination);
+                noise.start(now, Math.random() * 0.8, 0.15);
+            }
+
+            // Soft Chime when lighting a Sacred Diya or Sky Lantern
+            playSacredChime() {
+                if (!this.enabled || !this.ctx) return;
+                const now = this.ctx.currentTime;
+                const freqs = [528, 660, 792, 1056];
+                freqs.forEach((f, idx) => {
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(f, now + idx * 0.07);
+                    gain.gain.setValueAtTime(0.001, now + idx * 0.07);
+                    gain.gain.linearRampToValueAtTime(0.07, now + idx * 0.07 + 0.03);
+                    gain.gain.exponentialRampToValueAtTime(0.0005, now + idx * 0.07 + 1.4);
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+                    osc.start(now + idx * 0.07);
+                    osc.stop(now + idx * 0.07 + 1.45);
+                });
+            }
+        }
+
+        const pyroAudio = new RealisticPyroAudio();
+
+        function toggleAudioEngine() {
+            pyroAudio.init();
+            pyroAudio.enabled = !pyroAudio.enabled;
+            const icon = document.getElementById('audioIcon');
+            const text = document.getElementById('audioStatusText');
+            if (pyroAudio.enabled) {
+                icon.className = 'fa-solid fa-volume-high text-amber-400 animate-pulse';
+                text.textContent = 'Sound: ON';
+                pyroAudio.playSacredChime();
+                showToast('🔊', 'Realistic Cracker Audio Enabled');
+            } else {
+                icon.className = 'fa-solid fa-volume-xmark text-rose-400';
+                text.textContent = 'Sound: OFF';
+                showToast('🔇', 'Sound Muted');
+            }
+        }
+
+        /*************************************************************************
+         * 2. HIGH-DPI PHOTOREALISTIC CANVAS PYROTECHNICS & SKY ENGINE
+         *************************************************************************/
+        const canvas = document.getElementById('pyroCanvas');
+        const ctx = canvas.getContext('2d', { alpha: true });
+
+        let cw = window.innerWidth;
+        let ch = window.innerHeight;
+        let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+        function resizeCanvas() {
+            cw = window.innerWidth;
+            ch = window.innerHeight;
+            dpr = Math.min(window.devicePixelRatio || 1, 2);
+            canvas.width = cw * dpr;
+            canvas.height = ch * dpr;
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            initStars();
+        }
+        window.addEventListener('resize', resizeCanvas);
+
+        // Ambient Sky Flash intensity when big shells explode
+        let skyFlashAlpha = 0;
+        let skyFlashHue = 42;
+
+        // Background Twinkling Stars
+        let stars = [];
+        function initStars() {
+            stars = [];
+            const count = Math.floor((cw * ch) / 9500);
+            for (let i = 0; i < count; i++) {
+                stars.push({
+                    x: Math.random() * cw,
+                    y: Math.random() * (ch * 0.78),
+                    r: Math.random() * 1.4 + 0.3,
+                    alpha: Math.random() * 0.8 + 0.2,
+                    twinkleSpeed: Math.random() * 0.03 + 0.008,
+                    phase: Math.random() * Math.PI * 2
+                });
+            }
+        }
+
+        // Floating Kongming Sky Lanterns in Background
+        let skyLanterns = [];
+        function initSkyLanterns() {
+            skyLanterns = [];
+            for (let i = 0; i < 12; i++) {
+                skyLanterns.push(createLanternObject(
+                    Math.random() * cw,
+                    Math.random() * ch,
+                    Math.random() * 0.55 + 0.35,
+                    i % 3 === 0 ? "Anvi ❤️" : ""
+                ));
+            }
+        }
+
+        function createLanternObject(x, y, scale, label = "") {
+            return {
+                x,
+                y,
+                scale,
+                vy: -(0.22 + scale * 0.38),
+                vx: (Math.random() - 0.5) * 0.25,
+                swayPhase: Math.random() * Math.PI * 2,
+                swaySpeed: 0.015 + Math.random() * 0.015,
+                label
+            };
+        }
+
+        // Particle & Pyrotechnic Arrays
+        const rockets = [];
+        const sparks = [];
+        const smokes = [];
+        const anarFountains = [];
+        const chakriSpinners = [];
+        const ladiChains = [];
+
+        // Realistic Firework Color Palettes
+        const PALETTES = {
+            goldKamuro: [42, 45, 38, 48],
+            rubyHeart: [345, 352, 15, 45],
+            royalPeony: [280, 320, 45, 195],
+            emeraldGold: [145, 160, 45, 50],
+            diwaliClassic: [15, 35, 48, 330, 185]
+        };
+
+        // 2A. Aerial Rocket Class
+        class AerialRocket {
+            constructor(startX, startY, targetX, targetY, shellType = 'random', customLetterPts = null) {
+                this.x = startX;
+                this.y = startY;
+                this.targetX = targetX;
+                this.targetY = targetY;
+                this.shellType = shellType;
+                this.customLetterPts = customLetterPts;
+
+                const angle = Math.atan2(targetY - startY, targetX - startX);
+                const dist = Math.hypot(targetX - startX, targetY - startY);
+                const speed = Math.min(Math.max(dist / 36, 11), 17);
+
+                this.vx = Math.cos(angle) * speed;
+                this.vy = Math.sin(angle) * speed;
+                this.trail = [];
+                this.hue = 42;
+                this.wobble = Math.random() * 10;
+            }
+
+            update() {
+                this.trail.push({ x: this.x, y: this.y });
+                if (this.trail.length > 8) this.trail.shift();
+
+                this.wobble += 0.25;
+                this.x += this.vx + Math.sin(this.wobble) * 0.35;
+                this.y += this.vy;
+                this.vy += 0.11; // Gravity slowing ascent
+
+                // Emit realistic ascending golden tail sparks
+                for (let i = 0; i < 2; i++) {
+                    sparks.push(new PyroSpark(
+                        this.x + (Math.random() - 0.5) * 3,
+                        this.y + (Math.random() - 0.5) * 3,
+                        (Math.random() - 0.5) * 1.2 - this.vx * 0.15,
+                        Math.random() * 1.5 + 0.5,
+                        40 + Math.random() * 12,
+                        0.038,
+                        1.4,
+                        false
+                    ));
+                }
+
+                // Check if reached apex or target
+                const distToTarget = Math.hypot(this.targetX - this.x, this.targetY - this.y);
+                if (distToTarget < 22 || this.vy >= -1.2 || this.y <= 70) {
+                    this.explode();
+                    return false;
+                }
+                return true;
+            }
+
+            draw() {
+                if (this.trail.length > 1) {
+                    ctx.beginPath();
+                    ctx.moveTo(this.trail[0].x, this.trail[0].y);
+                    for (let i = 1; i < this.trail.length; i++) {
+                        ctx.lineTo(this.trail[i].x, this.trail[i].y);
+                    }
+                    ctx.strokeStyle = `hsla(42, 100%, 75%, 0.85)`;
+                    ctx.lineWidth = 2.4;
+                    ctx.stroke();
+                }
+                // Glowing rocket core
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, 3, 0, Math.PI * 2);
+                ctx.fillStyle = '#ffffff';
+                ctx.fill();
+            }
+
+            explode() {
+                // If custom sky-writing points provided (for "ANVI ❤️")
+                if (this.customLetterPts) {
+                    pyroAudio.playShellBoom(0.95, true);
+                    skyFlashAlpha = 0.22;
+                    skyFlashHue = this.customLetterPts.hue || 45;
+                    this.customLetterPts.points.forEach(pt => {
+                        const jx = pt.x + (Math.random() - 0.5) * 2.5;
+                        const jy = pt.y + (Math.random() - 0.5) * 2.5;
+                        const s = new PyroSpark(
+                            this.x + jx * 0.12,
+                            this.y + jy * 0.12,
+                            jx * 0.085,
+                            jy * 0.085,
+                            this.customLetterPts.hue,
+                            0.0085,
+                            2.4,
+                            true
+                        );
+                        s.drag = 0.92;
+                        s.gravity = 0.018;
+                        sparks.push(s);
+                    });
+                    return;
+                }
+
+                const types = ['chrysanthemum', 'kamuro', 'heart', 'ringCrackle', 'doublePeony'];
+                const chosen = this.shellType === 'random'
+                    ? types[Math.floor(Math.random() * types.length)]
+                    : this.shellType;
+
+                // Spawn realistic smoke puff
+                for (let s = 0; s < 5; s++) {
+                    smokes.push({
+                        x: this.x + (Math.random() - 0.5) * 25,
+                        y: this.y + (Math.random() - 0.5) * 25,
+                        r: 18 + Math.random() * 20,
+                        alpha: 0.16,
+                        vx: (Math.random() - 0.5) * 0.4,
+                        vy: -0.25 - Math.random() * 0.25
+                    });
+                }
+
+                if (chosen === 'heart') {
+                    pyroAudio.playShellBoom(1.0, false);
+                    skyFlashAlpha = 0.24;
+                    skyFlashHue = 345;
+                    const count = 115;
+                    for (let i = 0; i < count; i++) {
+                        const t = (i / count) * Math.PI * 2;
+                        // Parametric Heart Equation
+                        const hx = 16 * Math.pow(Math.sin(t), 3);
+                        const hy = -(13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));
+                        const p = new PyroSpark(
+                            this.x,
+                            this.y,
+                            hx * 0.34 + (Math.random() - 0.5) * 0.4,
+                            hy * 0.34 + (Math.random() - 0.5) * 0.4,
+                            342 + Math.random() * 20,
+                            0.012,
+                            2.5,
+                            true
+                        );
+                        p.drag = 0.955;
+                        p.gravity = 0.035;
+                        sparks.push(p);
+                    }
+                } else if (chosen === 'kamuro') {
+                    // Golden Willow / Kamuro with long weeping golden trails & glitter tips
+                    pyroAudio.playShellBoom(1.2, true);
+                    skyFlashAlpha = 0.28;
+                    skyFlashHue = 42;
+                    const count = 140;
+                    for (let i = 0; i < count; i++) {
+                        const angle = Math.random() * Math.PI * 2;
+                        const speed = Math.cos(Math.random() * (Math.PI / 2)) * 9.5 + 1.5;
+                        const p = new PyroSpark(
+                            this.x,
+                            this.y,
+                            Math.cos(angle) * speed,
+                            Math.sin(angle) * speed,
+                            40 + Math.random() * 12,
+                            0.0075,
+                            2.3,
+                            true
+                        );
+                        p.drag = 0.968;
+                        p.gravity = 0.075;
+                        p.trailLength = 12;
+                        sparks.push(p);
+                    }
+                } else {
+                    // Multi-layered Chrysanthemum / Peony / Crackle
+                    const palette = PALETTES.diwaliClassic;
+                    const primaryHue = palette[Math.floor(Math.random() * palette.length)];
+                    const secondaryHue = (primaryHue + 45) % 360;
+                    pyroAudio.playShellBoom(1.05, chosen === 'ringCrackle');
+                    skyFlashAlpha = 0.22;
+                    skyFlashHue = primaryHue;
+
+                    const count = 130;
+                    for (let i = 0; i < count; i++) {
+                        const angle = Math.random() * Math.PI * 2;
+                        // Spherical 3D projection distribution
+                        const phi = Math.acos(2 * Math.random() - 1);
+                        const speed = (Math.sin(phi) * 8.2) + (Math.random() * 1.2);
+                        const isInner = i % 3 === 0;
+                        const p = new PyroSpark(
+                            this.x,
+                            this.y,
+                            Math.cos(angle) * (isInner ? speed * 0.55 : speed),
+                            Math.sin(angle) * (isInner ? speed * 0.55 : speed),
+                            isInner ? secondaryHue : primaryHue,
+                            0.011 + Math.random() * 0.006,
+                            isInner ? 2.0 : 2.5,
+                            chosen === 'ringCrackle' || Math.random() > 0.5
+                        );
+                        p.drag = 0.962;
+                        p.gravity = 0.065;
+                        sparks.push(p);
+                    }
+                }
+            }
+        }
+
+        // 2B. Photorealistic Spark Particle Class (Supports Air Drag, Gravity, Floor Bounce & Glitter Strobe)
+        class PyroSpark {
+            constructor(x, y, vx, vy, hue, decay = 0.014, size = 2.2, strobe = false, floorY = null) {
+                this.x = x;
+                this.y = y;
+                this.vx = vx;
+                this.vy = vy;
+                this.hue = hue;
+                this.alpha = 1.0;
+                this.decay = decay;
+                this.size = size;
+                this.strobe = strobe;
+                this.floorY = floorY;
+                this.drag = 0.97;
+                this.gravity = 0.08;
+                this.trail = [];
+                this.trailLength = 6;
+            }
+
+            update() {
+                this.trail.push({ x: this.x, y: this.y });
+                if (this.trail.length > this.trailLength) this.trail.shift();
+
+                this.vx *= this.drag;
+                this.vy *= this.drag;
+                this.vy += this.gravity;
+
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Realistic bounce if courtyard ground cracker spark hits stone floor
+                if (this.floorY && this.y >= this.floorY && this.vy > 0) {
+                    this.y = this.floorY;
+                    this.vy = -this.vy * (0.35 + Math.random() * 0.25);
+                    this.vx *= 0.78;
+                }
+
+                this.alpha -= this.decay;
+                return this.alpha > 0.01;
+            }
+
+            draw() {
+                // Strobe / Glitter flicker at end of life
+                if (this.strobe && this.alpha < 0.45 && Math.random() > 0.55) return;
+
+                if (this.trail.length > 1) {
+                    ctx.beginPath();
+                    ctx.moveTo(this.trail[0].x, this.trail[0].y);
+                    for (let i = 1; i < this.trail.length; i++) {
+                        ctx.lineTo(this.trail[i].x, this.trail[i].y);
+                    }
+                    ctx.strokeStyle = `hsla(${this.hue}, 100%, 65%, ${this.alpha * 0.75})`;
+                    ctx.lineWidth = this.size * 0.85;
+                    ctx.lineCap = 'round';
+                    ctx.stroke();
+                }
+
+                // Hot incandescent core
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size * 0.75, 0, Math.PI * 2);
+                ctx.fillStyle = `hsla(${this.hue}, 100%, 92%, ${this.alpha})`;
+                ctx.fill();
+            }
+        }
+
+        // 2C. Realistic Anar (Flowerpot Fountain Cracker)
+        class AnarFountain {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.life = 280; // ~4.5 seconds of intense eruption
+                this.maxLife = 280;
+            }
+
+            update() {
+                this.life--;
+                const progress = 1 - (this.life / this.maxLife);
+                // Intensity ramps up quickly then tapers
+                const power = progress < 0.15 ? (progress / 0.15) : (this.life / this.maxLife);
+
+                // Emit 7 to 14 sparks per frame upward in a fountain cone
+                const count = Math.floor(6 + power * 10);
+                for (let i = 0; i < count; i++) {
+                    const spreadAngle = -Math.PI / 2 + (Math.random() - 0.5) * 0.48;
+                    const speed = (4.5 + Math.random() * 9.5) * (0.45 + power * 0.65);
+                    const hues = [42, 48, 340, 190];
+                    const hue = hues[Math.floor(Math.random() * hues.length)];
+                    const s = new PyroSpark(
+                        this.x + (Math.random() - 0.5) * 6,
+                        this.y - 14,
+                        Math.cos(spreadAngle) * speed,
+                        Math.sin(spreadAngle) * speed,
+                        hue,
+                        0.016 + Math.random() * 0.01,
+                        2.1 + Math.random() * 1.2,
+                        true,
+                        this.y + 4
+                    );
+                    s.gravity = 0.22; // Heavier fountain fallout
+                    s.drag = 0.98;
+                    sparks.push(s);
+                }
+
+                if (this.life % 5 === 0) {
+                    pyroAudio.playSparkCrackle(0.09 * power);
+                }
+
+                return this.life > 0;
+            }
+
+            draw() {
+                // Draw glowing floor reflection pool
+                const grad = ctx.createRadialGradient(this.x, this.y, 2, this.x, this.y, 90);
+                grad.addColorStop(0, 'rgba(255, 190, 60, 0.42)');
+                grad.addColorStop(1, 'rgba(255, 120, 0, 0)');
+                ctx.fillStyle = grad;
+                ctx.beginPath();
+                ctx.ellipse(this.x, this.y + 3, 85, 22, 0, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Draw Conical Foil Anar Body
+                ctx.beginPath();
+                ctx.moveTo(this.x - 12, this.y + 2);
+                ctx.lineTo(this.x - 4, this.y - 18);
+                ctx.lineTo(this.x + 4, this.y - 18);
+                ctx.lineTo(this.x + 12, this.y + 2);
+                ctx.closePath();
+                ctx.fillStyle = '#d97706';
+                ctx.strokeStyle = '#fde68a';
+                ctx.lineWidth = 1.5;
+                ctx.fill();
+                ctx.stroke();
+            }
+        }
+
+        // 2D. Realistic Zameen Chakri (Ground Spinner)
+        class ChakriSpinner {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.angle = 0;
+                this.life = 210;
+                this.vx = (Math.random() - 0.5) * 2.5;
+                this.vy = (Math.random() - 0.5) * 1.5;
+            }
+
+            update() {
+                this.life--;
+                this.angle += 0.55; // High-speed rotation
+
+                // Erratic skittering movement on floor
+                this.vx += (Math.random() - 0.5) * 0.45;
+                this.vy += (Math.random() - 0.5) * 0.35;
+                this.vx = Math.max(Math.min(this.vx, 3.2), -3.2);
+                this.vy = Math.max(Math.min(this.vy, 2.0), -2.0);
+
+                this.x = Math.max(60, Math.min(cw - 60, this.x + this.vx));
+                this.y = Math.max(120, Math.min(ch - 60, this.y + this.vy));
+
+                // Emit 3 tangential spiral arms of neon green, gold & crimson sparks
+                const armHues = [135, 45, 350];
+                for (let arm = 0; arm < 3; arm++) {
+                    const a = this.angle + (arm * (Math.PI * 2 / 3));
+                    const speed = 5.5 + Math.random() * 4.5;
+                    const s = new PyroSpark(
+                        this.x + Math.cos(a) * 8,
+                        this.y + Math.sin(a) * 4,
+                        Math.cos(a + Math.PI / 2) * speed,
+                        Math.sin(a + Math.PI / 2) * speed * 0.55,
+                        armHues[arm],
+                        0.028,
+                        2.1,
+                        true
+                    );
+                    s.gravity = 0.02;
+                    sparks.push(s);
+                }
+
+                if (this.life % 6 === 0) {
+                    pyroAudio.playSparkCrackle(0.07);
+                }
+
+                return this.life > 0;
+            }
+
+            draw() {
+                // Glowing spinning wheel disc
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.scale(1, 0.55);
+                ctx.beginPath();
+                ctx.arc(0, 0, 18, 0, Math.PI * 2);
+                ctx.strokeStyle = '#4ade80';
+                ctx.lineWidth = 3;
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.arc(0, 0, 6, 0, Math.PI * 2);
+                ctx.fillStyle = '#ffffff';
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        // 2E. Realistic 1000-Wala Ladi (Rapid Chain Garland Crackers)
+        class LadiGarland {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.burstsRemaining = 42;
+                this.tick = 0;
+            }
+
+            update() {
+                this.tick++;
+                if (this.tick % 3 === 0 && this.burstsRemaining > 0) {
+                    this.burstsRemaining--;
+                    const bx = this.x + (Math.random() - 0.5) * 110;
+                    const by = this.y + (Math.random() - 0.5) * 35;
+
+                    pyroAudio.playLadiSnap();
+                    skyFlashAlpha = 0.14;
+                    skyFlashHue = 18;
+
+                    // Subtle screen shake
+                    if (this.burstsRemaining % 5 === 0) {
+                        document.body.classList.remove('screen-shake');
+                        void document.body.offsetWidth;
+                        document.body.classList.add('screen-shake');
+                    }
+
+                    // Smoke puff
+                    smokes.push({
+                        x: bx,
+                        y: by,
+                        r: 16 + Math.random() * 14,
+                        alpha: 0.22,
+                        vx: (Math.random() - 0.5) * 0.6,
+                        vy: -0.5 - Math.random() * 0.4
+                    });
+
+                    // Red paper confetti & hot white/gold flash sparks
+                    for (let i = 0; i < 24; i++) {
+                        const angle = Math.random() * Math.PI * 2;
+                        const speed = 2 + Math.random() * 8;
+                        const isRedPaper = i % 3 === 0;
+                        const s = new PyroSpark(
+                            bx,
+                            by,
+                            Math.cos(angle) * speed,
+                            Math.sin(angle) * speed - 1.5,
+                            isRedPaper ? 0 : 42,
+                            isRedPaper ? 0.022 : 0.04,
+                            isRedPaper ? 2.6 : 2.1,
+                            !isRedPaper,
+                            by + 15
+                        );
+                        s.gravity = 0.18;
+                        sparks.push(s);
+                    }
+                }
+                return this.burstsRemaining > 0;
+            }
+        }
+
+        /*************************************************************************
+         * 3. INTERACTIVE PHULJHARI (SPARKLER CURSOR / TOUCH WAND)
+         *************************************************************************/
+        let sparklerEnabled = true;
+        let pointerX = cw / 2;
+        let pointerY = ch / 2;
+        let pointerActive = false;
+
+        function toggleSparklerCursor() {
+            sparklerEnabled = !sparklerEnabled;
+            const btn = document.getElementById('globalSparklerBtn');
+            const txt = document.getElementById('sparklerStatusText');
+            if (sparklerEnabled) {
+                btn.classList.add('active-cracker');
+                txt.textContent = 'Phuljhari: ON';
+                showToast('✨', 'Phuljhari Sparkler Wand Active!');
+            } else {
+                btn.classList.remove('active-cracker');
+                txt.textContent = 'Phuljhari: OFF';
+                showToast('🌙', 'Phuljhari Sparkler Paused');
+            }
+        }
+
+        function emitPhuljhariSparks(x, y, count = 5) {
+            if (!sparklerEnabled) return;
+            for (let i = 0; i < count; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const speed = 1.5 + Math.random() * 5.2;
+                const s = new PyroSpark(
+                    x,
+                    y,
+                    Math.cos(angle) * speed,
+                    Math.sin(angle) * speed,
+                    43 + Math.random() * 12,
+                    0.045 + Math.random() * 0.02,
+                    1.6 + Math.random() * 1.1,
+                    true
+                );
+                s.gravity = 0.12;
+                s.trailLength = 4;
+                sparks.push(s);
+            }
+            if (Math.random() > 0.72) {
+                pyroAudio.playSparkCrackle(0.04);
+            }
+        }
+
+        window.addEventListener('mousemove', (e) => {
+            pointerX = e.clientX;
+            pointerY = e.clientY;
+            pointerActive = true;
+            emitPhuljhariSparks(pointerX, pointerY, 4);
+        });
+
+        window.addEventListener('touchmove', (e) => {
+            if (e.touches.length > 0) {
+                pointerX = e.touches[0].clientX;
+                pointerY = e.touches[0].clientY;
+                pointerActive = true;
+                emitPhuljhariSparks(pointerX, pointerY, 5);
+            }
+        }, { passive: true });
+
+        // Clicking in the Hero Sky launches realistic shells toward tap point
+        document.getElementById('hero').addEventListener('pointerdown', (e) => {
+            // Avoid launching if clicking a button or link
+            if (e.target.closest('button') || e.target.closest('a')) return;
+            pyroAudio.init();
+            pyroAudio.playRocketLaunch(Math.random() > 0.4);
+            rockets.push(new AerialRocket(
+                cw * (0.2 + Math.random() * 0.6),
+                ch,
+                e.clientX,
+                Math.min(e.clientY, ch * 0.65),
+                'random'
+            ));
+        });
+
+        /*************************************************************************
+         * 4. SPECIAL "ANVI ❤️" SKY-WRITING FIREWORK ENGINE
+         *************************************************************************/
+        function getWordPixelPoints(text) {
+            const offCanvas = document.createElement('canvas');
+            offCanvas.width = 360;
+            offCanvas.height = 100;
+            const oCtx = offCanvas.getContext('2d');
+            oCtx.fillStyle = '#ffffff';
+            oCtx.font = 'bold 58px "Cinzel Decorative", serif';
+            oCtx.textAlign = 'center';
+            oCtx.textBaseline = 'middle';
+            oCtx.fillText(text, 180, 50);
+
+            const imgData = oCtx.getImageData(0, 0, 360, 100).data;
+            const points = [];
+            const step = 4;
+            for (let y = 0; y < 100; y += step) {
+                for (let x = 0; x < 360; x += step) {
+                    const alpha = imgData[(y * 360 + x) * 4 + 3];
+                    if (alpha > 128) {
+                        points.push({ x: (x - 180) * 1.35, y: (y - 50) * 1.35 });
+                    }
+                }
+            }
+            return points;
+        }
+
+        function launchAnviSkyShow() {
+            pyroAudio.init();
+            showToast('💖', 'Launching "ANVI ❤️" Sky Firework Salute!');
+
+            const letters = ['A', 'N', 'V', 'I', '❤️'];
+            const hues = [45, 340, 45, 340, 350];
+            const spacing = Math.min(cw * 0.15, 135);
+            const centerX = cw / 2;
+            const targetY = Math.max(130, ch * 0.26);
+
+            letters.forEach((char, idx) => {
+                setTimeout(() => {
+                    const tx = centerX + (idx - 2) * spacing;
+                    const pts = getWordPixelPoints(char);
+                    pyroAudio.playRocketLaunch(true);
+                    rockets.push(new AerialRocket(
+                        tx + (Math.random() - 0.5) * 40,
+                        ch,
+                        tx,
+                        targetY,
+                        'custom',
+                        { points: pts, hue: hues[idx] }
+                    ));
+                }, idx * 280);
+            });
+        }
+
+        function launchHeartBarrage() {
+            pyroAudio.init();
+            showToast('❤️', 'Ruby Heart Shells Launching for Anvi!');
+            for (let i = 0; i < 4; i++) {
+                setTimeout(() => {
+                    pyroAudio.playRocketLaunch(false);
+                    rockets.push(new AerialRocket(
+                        cw * (0.25 + i * 0.16),
+                        ch,
+                        cw * (0.22 + i * 0.18),
+                        ch * (0.22 + (i % 2) * 0.1),
+                        'heart'
+                    ));
+                }, i * 260);
+            }
+        }
+
+        function launchGoldenKamuro() {
+            pyroAudio.init();
+            showToast('👑', 'Royal Golden Kamuro Willow Shells!');
+            for (let i = 0; i < 3; i++) {
+                setTimeout(() => {
+                    pyroAudio.playRocketLaunch(true);
+                    rockets.push(new AerialRocket(
+                        cw * 0.5 + (i - 1) * 140,
+                        ch,
+                        cw * 0.5 + (i - 1) * 180,
+                        ch * 0.24,
+                        'kamuro'
+                    ));
+                }, i * 320);
+            }
+        }
+
+        function launchGrandFinaleSalute() {
+            pyroAudio.init();
+            showToast('🎆', 'Grand Sky Finale Barrage!');
+            for (let i = 0; i < 8; i++) {
+                setTimeout(() => {
+                    pyroAudio.playRocketLaunch(i % 2 === 0);
+                    rockets.push(new AerialRocket(
+                        cw * (0.15 + Math.random() * 0.7),
+                        ch,
+                        cw * (0.15 + Math.random() * 0.7),
+                        ch * (0.16 + Math.random() * 0.25),
+                        'random'
+                    ));
+                }, i * 210);
+            }
+        }
+
+        /*************************************************************************
+         * 5. SECTION 2: COURTYARD CRACKER STUDIO CONTROLLER
+         *************************************************************************/
+        let selectedCrackerType = 'anar';
+        const crackerNames = {
+            anar: 'Golden Anar (Fountain)',
+            chakri: 'Zameen Chakri (Spinner)',
+            ladi: '1000-Wala Garland Ladi',
+            rocket: 'Whistling Sky Rocket'
+        };
+
+        function selectAndTriggerCracker(type, btnEl) {
+            pyroAudio.init();
+            selectedCrackerType = type;
+            document.getElementById('currentCrackerLabel').textContent = crackerNames[type] || 'Golden Anar';
+
+            document.querySelectorAll('.cracker-card').forEach(b => b.classList.remove('active-cracker'));
+            if (btnEl) btnEl.classList.add('active-cracker');
+
+            // Immediately ignite one in the courtyard so Anvi sees instant feedback
+            const stage = document.getElementById('courtyardStage');
+            const rect = stage.getBoundingClientRect();
+            const spawnX = rect.left + rect.width * (0.3 + Math.random() * 0.4);
+            const spawnY = rect.top + rect.height * (0.58 + Math.random() * 0.22);
+            spawnCrackerAt(type, spawnX, spawnY);
+        }
+
+        function activatePhuljhariCard(btnEl) {
+            pyroAudio.init();
+            if (!sparklerEnabled) toggleSparklerCursor();
+            document.querySelectorAll('.cracker-card').forEach(b => b.classList.remove('active-cracker'));
+            btnEl.classList.add('active-cracker');
+            emitPhuljhariSparks(cw / 2, ch / 2, 35);
+            showToast('✨', 'Wave your finger or mouse anywhere to sparkle!');
+        }
+
+        function handleCourtyardClick(e) {
+            pyroAudio.init();
+            spawnCrackerAt(selectedCrackerType, e.clientX, e.clientY);
+        }
+
+        function spawnCrackerAt(type, x, y) {
+            if (type === 'anar') {
+                anarFountains.push(new AnarFountain(x, y));
+                showToast('🌋', 'Golden Anar Ignited!');
+            } else if (type === 'chakri') {
+                chakriSpinners.push(new ChakriSpinner(x, y));
+                showToast('🌀', 'Zameen Chakri Spinning!');
+            } else if (type === 'ladi') {
+                ladiChains.push(new LadiGarland(x, y));
+                showToast('🧨', '1000-Wala Ladi Ignited!');
+            } else if (type === 'rocket') {
+                pyroAudio.playRocketLaunch(true);
+                rockets.push(new AerialRocket(x, y, x + (Math.random() - 0.5) * 180, ch * 0.22, 'random'));
+                showToast('🚀', 'Whistling Bottle Rocket Launched!');
+            }
+        }
+
+        function igniteCourtyardCombo(combo) {
+            pyroAudio.init();
+            const stage = document.getElementById('courtyardStage');
+            const rect = stage.getBoundingClientRect();
+            const baseY = rect.top + rect.height * 0.72;
+
+            if (combo === 'anarRow') {
+                showToast('🌋', '5 Royal Golden Anars Ignited Together!');
+                for (let i = 0; i < 5; i++) {
+                    const ax = rect.left + (rect.width * (0.18 + i * 0.16));
+                    setTimeout(() => anarFountains.push(new AnarFountain(ax, baseY)), i * 140);
+                }
+            } else if (combo === 'chakriDance') {
+                showToast('🌀', 'Triple Neon Chakri Spinners!');
+                for (let i = 0; i < 3; i++) {
+                    const cx = rect.left + (rect.width * (0.28 + i * 0.22));
+                    chakriSpinners.push(new ChakriSpinner(cx, baseY - 25));
+                }
+            } else if (combo === 'megaLadi') {
+                showToast('🧨', 'Mega 1000-Wala Garland Strip Ignited!');
+                ladiChains.push(new LadiGarland(rect.left + rect.width * 0.35, baseY - 20));
+                setTimeout(() => ladiChains.push(new LadiGarland(rect.left + rect.width * 0.65, baseY - 20)), 400);
+            }
+        }
+
+        /*************************************************************************
+         * 6. SECTION 3: SACRED DIYA LIGHTING ALTAR FOR ANVI
+         *************************************************************************/
+        const diyaWishes = [
+            {
+                title: "Diya of Your Radiant Smile",
+                blessing: "For your effortless smile, Anvi, that turns even the most ordinary evening into a celebration of lights."
+            },
+            {
+                title: "Diya of Endless Peace & Joy",
+                blessing: "May every worry melt away like darkness before this flame, leaving only warmth and calm in your heart."
+            },
+            {
+                title: "Diya of Your Biggest Dreams",
+                blessing: "May every dream you whisper to yourself come true brighter and grander than you ever imagined."
+            },
+            {
+                title: "Diya of Our Cozy Moments",
+                blessing: "For all our late-night talks, inside jokes, and sweet memories we haven't even made yet."
+            },
+            {
+                title: "Diya of Good Health & Grace",
+                blessing: "May the divine light protect you, keep you glowing with health, and surround you with positivity always."
+            },
+            {
+                title: "Diya of Unconditional Love",
+                blessing: "A promise that no matter what season life brings, my heart will always be your warmest home."
+            },
+            {
+                title: "Our Forever Diwali Diya ❤️",
+                blessing: "To celebrating this Diwali and every single Diwali of our lives hand in hand, my dearest Anvi."
+            }
+        ];
+
+        const litDiyasState = new Array(diyaWishes.length).fill(false);
+
+        function renderSacredDiyas() {
+            const grid = document.getElementById('diyasGrid');
+            grid.innerHTML = '';
+
+            diyaWishes.forEach((item, index) => {
+                const isLit = litDiyasState[index];
+                const card = document.createElement('div');
+                card.className = `cursor-pointer rounded-2xl p-5 transition-all duration-500 border flex items-center gap-4 ${
+                    isLit
+                        ? 'bg-gradient-to-br from-amber-900/45 via-orange-950/40 to-night-900 border-amber-400 shadow-[0_0_30px_rgba(255,180,0,0.3)]'
+                        : 'bg-black/45 border-amber-500/20 hover:border-amber-400/50'
+                } ${index === 6 ? 'sm:col-span-2 lg:col-span-3 max-w-xl mx-auto w-full' : ''}`;
+
+                card.onclick = (e) => igniteSingleDiya(index, e);
+
+                card.innerHTML = `
+                    <div class="relative w-16 h-16 flex-shrink-0 flex items-center justify-center">
+                        ${isLit ? `<div class="absolute inset-0 rounded-full bg-amber-400/35 blur-xl animate-pulse"></div>` : ''}
+                        <svg viewBox="0 0 100 100" class="w-16 h-16 overflow-visible">
+                            <!-- Flame (Visible when lit) -->
+                            <g class="${isLit ? 'diya-flame-outer opacity-100' : 'opacity-0'} transition-opacity duration-500">
+                                <path d="M50 12 C37 33, 37 49, 50 55 C63 49, 63 33, 50 12 Z" fill="#ff9900"/>
+                                <path d="M50 23 C43 37, 43 47, 50 53 C57 47, 57 37, 50 23 Z" fill="#fffbe0"/>
+                            </g>
+                            <!-- Unlit Wick -->
+                            <line x1="50" y1="48" x2="50" y2="56" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
+                            <!-- Terracotta & Brass Diya Bowl -->
+                            <path d="M16 56 Q50 66 84 56 L73 80 Q50 90 27 80 Z" fill="${isLit ? '#d97706' : '#78350f'}" stroke="#fbbf24" stroke-width="1.5"/>
+                            <ellipse cx="50" cy="56" rx="34" ry="7" fill="#451a03" stroke="#f59e0b" stroke-width="1.2"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1 text-left">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-cinzel font-bold text-sm sm:text-base ${isLit ? 'text-amber-300' : 'text-amber-100/75'}">${item.title}</h3>
+                            <span class="text-[10px] px-2 py-0.5 rounded-full ${isLit ? 'bg-amber-400/25 text-amber-200' : 'bg-white/5 text-amber-200/40'}">
+                                ${isLit ? 'Lit ✨' : 'Tap to Light'}
+                            </span>
+                        </div>
+                        <p class="font-serif italic text-sm sm:text-base mt-1 ${isLit ? 'text-amber-50' : 'text-amber-200/40'}">
+                            ${isLit ? `"${item.blessing}"` : 'Tap this Diya to light the wick and reveal its blessing...'}
+                        </p>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function igniteSingleDiya(index, evt) {
+            pyroAudio.init();
+            pyroAudio.playSacredChime();
+
+            if (!litDiyasState[index]) {
+                litDiyasState[index] = true;
+            }
+
+            if (evt && evt.clientX) {
+                emitPhuljhariSparks(evt.clientX, evt.clientY, 22);
+            }
+
+            const litCount = litDiyasState.filter(Boolean).length;
+            document.getElementById('diyaCountText').textContent = `${litCount} / ${diyaWishes.length}`;
+            document.getElementById('diyaBlessingQuote').textContent = `"${diyaWishes[index].blessing}"`;
+
+            renderSacredDiyas();
+
+            if (litCount === diyaWishes.length) {
+                showToast('🪔', 'All 7 Sacred Diyas Lit! Launching Golden Blessing Shower!');
+                launchGoldenKamuro();
+            }
+        }
+
+        function lightAllDiyas() {
+            pyroAudio.init();
+            diyaWishes.forEach((_, idx) => {
+                setTimeout(() => {
+                    litDiyasState[idx] = true;
+                    pyroAudio.playSacredChime();
+                    const litCount = litDiyasState.filter(Boolean).length;
+                    document.getElementById('diyaCountText').textContent = `${litCount} / ${diyaWishes.length}`;
+                    document.getElementById('diyaBlessingQuote').textContent = `"${diyaWishes[idx].blessing}"`;
+                    renderSacredDiyas();
+                    if (idx === diyaWishes.length - 1) {
+                        launchAnviSkyShow();
+                    }
+                }, idx * 220);
+            });
+        }
+
+        /*************************************************************************
+         * 7. SECTION 4: FLOATING WISH LANTERNS ENGINE
+         *************************************************************************/
+        function setLanternPreset(text) {
+            document.getElementById('lanternWishInput').value = text;
+        }
+
+        function releaseCustomLantern() {
+            pyroAudio.init();
+            pyroAudio.playSacredChime();
+            const input = document.getElementById('lanternWishInput');
+            const wishText = (input.value || 'Happy Diwali Anvi ❤️').trim();
+
+            const lx = cw * (0.25 + Math.random() * 0.5);
+            const ly = ch + 30;
+            skyLanterns.push(createLanternObject(lx, ly, 0.92, wishText));
+
+            document.getElementById('lanternCounter').textContent = skyLanterns.length;
+            emitPhuljhariSparks(cw / 2, ch * 0.7, 25);
+            showToast('🏮', `Wish Lantern Released: "${wishText}"`);
+        }
+
+        function releaseLanternFlock() {
+            pyroAudio.init();
+            pyroAudio.playSacredChime();
+            const notes = ["Anvi ❤️", "Forever ✨", "My Roshni 🪔", "Love You 💖", "Happy Diwali 🌟"];
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    skyLanterns.push(createLanternObject(
+                        cw * (0.1 + Math.random() * 0.8),
+                        ch + 40,
+                        0.55 + Math.random() * 0.4,
+                        notes[i % notes.length]
+                    ));
+                    document.getElementById('lanternCounter').textContent = skyLanterns.length;
+                }, i * 180);
+            }
+            showToast('🏮', '10 Glowing Wish Lanterns Rising Into the Stars!');
+        }
+
+        /*************************************************************************
+         * 8. ROMANTIC FINALE & ENTRANCE CONTROLLER
+         *************************************************************************/
+        function enterDiwaliExperience() {
+            pyroAudio.init();
+            const overlay = document.getElementById('welcomeOverlay');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            setTimeout(() => overlay.style.display = 'none', 700);
+
+            pyroAudio.playSacredChime();
+            setTimeout(() => launchAnviSkyShow(), 400);
+        }
+
+        function triggerRomanticFinale() {
+            pyroAudio.init();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            launchAnviSkyShow();
+            setTimeout(() => launchHeartBarrage(), 1600);
+            setTimeout(() => launchGoldenKamuro(), 3100);
+        }
+
+        let toastTimer = null;
+        function showToast(emoji, msg) {
+            const toast = document.getElementById('festiveToast');
+            document.getElementById('toastEmoji').textContent = emoji;
+            document.getElementById('toastMessage').textContent = msg;
+            toast.classList.remove('opacity-0', '-translate-y-3');
+            toast.classList.add('opacity-100', 'translate-y-0');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toast.classList.add('opacity-0', '-translate-y-3');
+                toast.classList.remove('opacity-100', 'translate-y-0');
+            }, 2800);
+        }
+
+        /*************************************************************************
+         * 9. MAIN 60FPS RENDER LOOP (STARS, LANTERNS, SMOKE, SPARKS & BLOOM)
+         *************************************************************************/
+        let autoSkyFireworkTick = 0;
+
+        function animateLoop() {
+            requestAnimationFrame(animateLoop);
+
+            // Clear with slight motion trail persistence for photorealistic bloom
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.fillStyle = 'rgba(4, 4, 10, 0.26)';
+            ctx.fillRect(0, 0, cw, ch);
+
+            // 1. Dynamic Ambient Night Sky Illumination when a shell bursts
+            if (skyFlashAlpha > 0.005) {
+                const skyGrad = ctx.createRadialGradient(cw / 2, ch * 0.3, 40, cw / 2, ch * 0.5, cw * 0.85);
+                skyGrad.addColorStop(0, `hsla(${skyFlashHue}, 95%, 60%, ${skyFlashAlpha})`);
+                skyGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+                ctx.fillStyle = skyGrad;
+                ctx.fillRect(0, 0, cw, ch);
+                skyFlashAlpha *= 0.9;
+            }
+
+            // 2. Render Twinkling Stars
+            for (let i = 0; i < stars.length; i++) {
+                const st = stars[i];
+                st.phase += st.twinkleSpeed;
+                const a = st.alpha * (0.65 + 0.35 * Math.sin(st.phase));
+                ctx.fillStyle = `rgba(255, 248, 225, ${a})`;
+                ctx.beginPath();
+                ctx.arc(st.x, st.y, st.r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // 3. Render Floating Kongming Sky Lanterns
+            for (let i = skyLanterns.length - 1; i >= 0; i--) {
+                const ln = skyLanterns[i];
+                ln.swayPhase += ln.swaySpeed;
+                ln.x += ln.vx + Math.sin(ln.swayPhase) * 0.25;
+                ln.y += ln.vy;
+
+                if (ln.y < -80) {
+                    ln.y = ch + 50;
+                    ln.x = Math.random() * cw;
+                }
+
+                const w = 22 * ln.scale;
+                const h = 30 * ln.scale;
+
+                ctx.save();
+                ctx.translate(ln.x, ln.y);
+                ctx.rotate(Math.sin(ln.swayPhase) * 0.06);
+
+                // Warm outer lantern aura
+                const aura = ctx.createRadialGradient(0, 0, 2, 0, 0, w * 2.2);
+                aura.addColorStop(0, 'rgba(255, 175, 40, 0.35)');
+                aura.addColorStop(1, 'rgba(255, 110, 0, 0)');
+                ctx.fillStyle = aura;
+                ctx.beginPath();
+                ctx.arc(0, 0, w * 2.2, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Lantern Paper Body
+                ctx.fillStyle = 'rgba(255, 145, 30, 0.88)';
+                ctx.beginPath();
+                ctx.roundRect(-w / 2, -h / 2, w, h, 5 * ln.scale);
+                ctx.fill();
+
+                // Inner Flame Core
+                ctx.fillStyle = '#fffbeb';
+                ctx.beginPath();
+                ctx.arc(0, h * 0.25, 3.2 * ln.scale, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Optional Wish Label
+                if (ln.label && ln.scale > 0.65) {
+                    ctx.font = `${Math.max(10, Math.floor(12 * ln.scale))}px "Plus Jakarta Sans", sans-serif`;
+                    ctx.fillStyle = 'rgba(255, 240, 195, 0.92)';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(ln.label, 0, -h * 0.65);
+                }
+
+                ctx.restore();
+            }
+
+            // 4. Render Dissipating Smoke Plumes
+            for (let i = smokes.length - 1; i >= 0; i--) {
+                const sm = smokes[i];
+                sm.x += sm.vx;
+                sm.y += sm.vy;
+                sm.r += 0.35;
+                sm.alpha -= 0.0022;
+                if (sm.alpha <= 0.005) {
+                    smokes.splice(i, 1);
+                    continue;
+                }
+                const smGrad = ctx.createRadialGradient(sm.x, sm.y, 2, sm.x, sm.y, sm.r);
+                smGrad.addColorStop(0, `rgba(160, 150, 175, ${sm.alpha})`);
+                smGrad.addColorStop(1, 'rgba(80, 75, 95, 0)');
+                ctx.fillStyle = smGrad;
+                ctx.beginPath();
+                ctx.arc(sm.x, sm.y, sm.r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Switch to Additive Blending for Realistic Incandescent Light Bloom
+            ctx.globalCompositeOperation = 'lighter';
+
+            // 5. Update & Draw Aerial Rockets
+            for (let i = rockets.length - 1; i >= 0; i--) {
+                if (rockets[i].update()) {
+                    rockets[i].draw();
+                } else {
+                    rockets.splice(i, 1);
+                }
+            }
+
+            // 6. Update & Draw Courtyard Anar Fountains
+            for (let i = anarFountains.length - 1; i >= 0; i--) {
+                if (anarFountains[i].update()) {
+                    anarFountains[i].draw();
+                } else {
+                    anarFountains.splice(i, 1);
+                }
+            }
+
+            // 7. Update & Draw Courtyard Chakri Spinners
+            for (let i = chakriSpinners.length - 1; i >= 0; i--) {
+                if (chakriSpinners[i].update()) {
+                    chakriSpinners[i].draw();
+                } else {
+                    chakriSpinners.splice(i, 1);
+                }
+            }
+
+            // 8. Update 1000-Wala Ladi Chains
+            for (let i = ladiChains.length - 1; i >= 0; i--) {
+                if (!ladiChains[i].update()) {
+                    ladiChains.splice(i, 1);
+                }
+            }
+
+            // 9. Update & Draw All Pyrotechnic Sparks
+            for (let i = sparks.length - 1; i >= 0; i--) {
+                if (sparks[i].update()) {
+                    sparks[i].draw();
+                } else {
+                    sparks.splice(i, 1);
+                }
+            }
+
+            // 10. Draw Glowing Phuljhari Sparkler Tip at Cursor/Finger
+            if (sparklerEnabled && pointerActive) {
+                const spGrad = ctx.createRadialGradient(pointerX, pointerY, 1, pointerX, pointerY, 26);
+                spGrad.addColorStop(0, 'rgba(255, 255, 240, 0.95)');
+                spGrad.addColorStop(0.35, 'rgba(255, 200, 60, 0.55)');
+                spGrad.addColorStop(1, 'rgba(255, 120, 0, 0)');
+                ctx.fillStyle = spGrad;
+                ctx.beginPath();
+                ctx.arc(pointerX, pointerY, 26, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // 11. Ambient Background Sky Fireworks every few seconds so the sky is always alive
+            autoSkyFireworkTick++;
+            if (autoSkyFireworkTick % 135 === 0 && rockets.length < 3) {
+                const rx = cw * (0.15 + Math.random() * 0.7);
+                rockets.push(new AerialRocket(
+                    rx,
+                    ch,
+                    rx + (Math.random() - 0.5) * 120,
+                    ch * (0.16 + Math.random() * 0.25),
+                    'random'
+                ));
+            }
+        }
+
+        // Initialize Everything on Window Load
+        window.onload = function () {
+            resizeCanvas();
+            initSkyLanterns();
+            renderSacredDiyas();
+            animateLoop();
+        };
+    </script>
+</body>
+</html>
